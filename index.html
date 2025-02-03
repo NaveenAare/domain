@@ -808,7 +808,7 @@ footer {
           </div>
           <div class="grid-item-2">
             <div class="team_img_wrapper">
-              <img src="./img/5326273.jpg" alt="team-img" />
+              <img src=".//img/5326273.jpg" alt="team-img" />
             </div>
           </div>
         </div>
@@ -1009,7 +1009,7 @@ footer {
 <div class="companies-container">
     <div class="company-card">
         <div class="company-logo">
-            <img src="img/google-color.png" alt="Google">
+            <img src="/img/google-color.png" alt="Google">
         </div>
         <div class="company-content">
             <h2 class="company-name">Google</h2>
@@ -1018,7 +1018,7 @@ footer {
 
     <div class="company-card">
         <div class="company-logo">
-            <img src="img/microsoft-logo-microsoft-icon-transparent-free-png.webp" alt="Microsoft">
+            <img src="/img/microsoft-logo-microsoft-icon-transparent-free-png.webp" alt="Microsoft">
         </div>
         <div class="company-content">
             <h2 class="company-name">Microsoft</h2>
@@ -1027,7 +1027,7 @@ footer {
 
     <div class="company-card">
         <div class="company-logo">
-            <img src="img/download.png" alt="Amazon">
+            <img src="/img/download.png" alt="Amazon">
         </div>
         <div class="company-content">
             <h2 class="company-name">Zoho</h2>
@@ -1035,7 +1035,7 @@ footer {
     </div>
     <div class="company-card">
         <div class="company-logo">
-            <img src="img/godaddy.png" alt="Google">
+            <img src="/img/godaddy.png" alt="Google">
         </div>
         <div class="company-content">
             <h2 class="company-name">Go-Daddy</h2>
@@ -1044,7 +1044,7 @@ footer {
 
     <div class="company-card">
         <div class="company-logo">
-            <img src="img/download (1).png" alt="Microsoft">
+            <img src="/img/download (1).png" alt="Microsoft">
         </div>
         <div class="company-content">
             <h2 class="company-name">hostinger</h2>
@@ -1054,7 +1054,7 @@ footer {
 
     <div class="company-card">
         <div class="company-logo">
-            <img src="img/download (2).png" alt="Amazon">
+            <img src="/img/download (2).png" alt="Amazon">
         </div>
         <div class="company-content">
             <h2 class="company-name">protonmail</h2>
@@ -1063,7 +1063,7 @@ footer {
 
      <div class="company-card">
         <div class="company-logo">
-            <img src="img/download (3).png" alt="Amazon">
+            <img src="/img/download (3).png" alt="Amazon">
         </div>
         <div class="company-content">
             <h2 class="company-name">Name Cheap</h2>
@@ -1075,7 +1075,7 @@ footer {
 
      <div class="company-card">
         <div class="company-logo">
-            <img src="img/download (4).png" alt="Amazon">
+            <img src="/img/download (4).png" alt="Amazon">
         </div>
         <div class="company-content">
             <h2 class="company-name">Site Ground</h2>
@@ -1084,7 +1084,7 @@ footer {
 
     <div class="company-card">
         <div class="company-logo">
-            <img src="img/download (5).png" alt="Amazon">
+            <img src="/img/download (5).png" alt="Amazon">
         </div>
         <div class="company-content">
             <h2 class="company-name">Site Ground</h2>
@@ -1104,19 +1104,19 @@ footer {
       
     <div class="testimonials-container">
         <div class="testimonial" id="testimonial1">
-            <img src="img/nick.png" alt="Person Name">
+            <img src="/img/nick.png" alt="Person Name">
             <p class="testimonial-name">Nick</p>
             <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
             <p class="testimonial-text">"Best domain broker service! The process was smoo"Excellent domain brokerage! Quick, transparent, and hassle-free service. Highly recommended!"th, transparent, and highly professional. Highly recommended!</p>
         </div>
         <div class="testimonial" id="testimonial2">
-            <img src="img/barbie.png" alt="Person Name">
+            <img src="/img/barbie.png" alt="Person Name">
             <p class="testimonial-name">Perry</p>
             <p class="testimonial-rating">⭐⭐⭐⭐</p>
             <p class="testimonial-text">"Excellent domain brokerage! Quick, transparent, and hassle-free service. Highly recommended!</p>
         </div>
         <div class="testimonial" id="testimonial2">
-            <img src="img/hanuman.jpg" alt="Person Name">
+            <img src="/img/hanuman.jpg" alt="Person Name">
             <p class="testimonial-name">Hanuman</p>
             <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
             <p class="testimonial-text">"Top-notch domain broker service! Fast, reliable, and professional. Highly recommended!"</p>
@@ -1135,6 +1135,77 @@ footer {
     <!-- ==== GSAP CDN ==== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <!-- ==== SCRIPT.JS ==== -->
-    <script src="./script.js" defer></script>
+    <script>
+      
+      const navId = document.getElementById("nav_menu"),
+  ToggleBtnId = document.getElementById("toggle_btn"),
+  CloseBtnId = document.getElementById("close_btn");
+
+// ==== SHOW MENU ==== //
+ToggleBtnId.addEventListener("click", () => {
+  navId.classList.add("show");
+});
+
+// ==== HIDE MENU ==== //
+CloseBtnId.addEventListener("click", () => {
+  navId.classList.remove("show");
+});
+
+// ==== Animate on Scroll Initialize  ==== //
+AOS.init();
+
+// ==== GSAP Animations ==== //
+// ==== LOGO  ==== //
+gsap.from(".logo", {
+  opacity: 0,
+  y: -10,
+  delay: 0.5,
+  duration: 0.5,
+});
+// ==== NAV-MENU ==== //
+gsap.from(".nav_menu_list .nav_menu_item", {
+  opacity: 0,
+  y: -10,
+  delay: 0.9,
+  duration: 0.5,
+  stagger: 0.3,
+});
+// ==== TOGGLE BTN ==== //
+gsap.from(".toggle_btn", {
+  opacity: 0,
+  y: -10,
+  delay: 0.9,
+  duration: 0.5,
+});
+// ==== MAIN HEADING  ==== //
+gsap.from(".main-heading", {
+  opacity: 0,
+  y: 20,
+  delay: 1.2,
+  duration: 1,
+});
+// ==== INFO TEXT ==== //
+gsap.from(".info-text", {
+  opacity: 0,
+  y: 20,
+  delay: 1.4,
+  duration: 1,
+});
+// ==== CTA BUTTONS ==== //
+gsap.from(".btn_wrapper", {
+  opacity: 0,
+  y: 20,
+  delay: 1.4,
+  duration: 1,
+});
+// ==== TEAM IMAGE ==== //
+gsap.from(".team_img_wrapper img", {
+  opacity: 0,
+  y: 20,
+  delay: 1.5,
+  duration: 1,
+});
+
+    </script>
   </body>
 </html>
